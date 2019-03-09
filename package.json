@@ -1,0 +1,25 @@
+{
+  "name": "project_b4_async_await",
+  "version": "1.0.0",
+  "description": "",
+  "main": "request.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "request": "^2.88.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node request.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenHoangHieu/project_b4_async_await.git"
+  },
+  "author": "hieu",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenHoangHieu/project_b4_async_await/issues"
+  },
+  "homepage": "https://github.com/NguyenHoangHieu/project_b4_async_await#readme"
+}
