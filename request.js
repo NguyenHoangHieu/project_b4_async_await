@@ -35,10 +35,16 @@ class Tinh{
     }
 }
 
+const port = process.env.PORT || 5000
+app.listen(port,()=>{
+    console.log('Server started on port '+port)
+})
 
 function cong(a, b, fn){
     const fullUrl = `${URL}${a}/cong/${b}`;
     request(fullUrl, (err, res, body)=>{
+        if(isNaN(a) || isNaN(b))
+            return 
         if (err) {
             return fn(null, err.message);//return console.log(err);//err
         } else {
@@ -47,6 +53,7 @@ function cong(a, b, fn){
         }
     })
 }
+
 
 function nhan(a, b, fn){
     const fullUrl = `${URL}${a}/nhan/${b}`;
@@ -110,17 +117,3 @@ cong(2, 4, (tong, err)=>{
 
 
 
-
-
-
-
-
-
-
-
-
-
-const port = process.env.PORT || 5000
-app.listen(port,()=>{
-    console.log('Server started on port '+port)
-})
